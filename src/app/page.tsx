@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import BasicButton from "@/components/ui/button";
+import BasicCheckbox from "@/components/ui/checkbox";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -52,7 +52,7 @@ export default function Home() {
           aria-label="basic tabs example"
         >
           <Tab label="Button" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
+          <Tab label="Checkbox" {...a11yProps(1)} />
           <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
       </Box>
@@ -60,7 +60,7 @@ export default function Home() {
         <BasicButton />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Item Two
+        <BasicCheckbox />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         Item Three
