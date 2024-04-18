@@ -6,6 +6,7 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import BasicButton from "@/components/ui/button";
 import BasicCheckbox from "@/components/ui/checkbox";
+import BasicRadio from "@/components/ui/radio";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -53,7 +54,7 @@ export default function Home() {
         >
           <Tab label="Button" {...a11yProps(0)} />
           <Tab label="Checkbox" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Radio" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
@@ -63,7 +64,7 @@ export default function Home() {
         <BasicCheckbox />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Item Three
+        <BasicRadio />
       </CustomTabPanel>
     </Box>
   );
